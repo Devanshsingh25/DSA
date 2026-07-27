@@ -1,7 +1,7 @@
 class Solution {
 public:
     string removeOuterParentheses(string s) {
-        vector<string>v;
+        // vector<string>v;
         string result="";
         int n = s.size();
         int count=0;
@@ -9,19 +9,21 @@ public:
           if(s[i]=='('){
             count++;
             if(count>1){
-              v.push_back("(");
+            //   v.push_back("(");
+            result = result+"(";
             }
           }
           else{
             count--;
             if(count>0){
-                v.push_back(")");
+                // v.push_back(")");
+                result = result+")";
             }
           }
        }
-       for(int i=0;i<v.size();i++){
-          result = result+v[i];
-       }
+    //    for(int i=0;i<v.size();i++){
+    //       result = result+v[i];
+    //    }
        return result;
 
         
