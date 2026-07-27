@@ -6,7 +6,10 @@ public:
         for(int i = 0;i<s.size();i++){
             if(s[i]=='('){
                 count++;
-                maxi = max(maxi,count);
+                // maxi = max(maxi,count);
+                if(maxi<count){
+                    maxi = count;
+                }
             }
             else if(s[i]==')'){
                 count--;
