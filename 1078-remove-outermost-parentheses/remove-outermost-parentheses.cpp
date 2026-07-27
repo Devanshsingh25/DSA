@@ -12,7 +12,7 @@ public:
               v.push_back("(");
             }
           }
-          else if(s[i]==')'){
+          else{
             count--;
             if(count>0){
                 v.push_back(")");
