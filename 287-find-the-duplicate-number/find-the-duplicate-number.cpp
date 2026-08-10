@@ -6,6 +6,7 @@ public:
         //     if(nums[i]==nums[i+1]) return nums[i];
         // }
         // return -1;
+       
         vector<int>v(nums.size());
         int dupli;
         for(int i =0;i<nums.size();i++){
