@@ -56,7 +56,7 @@ public:
                 n++;
             }
         }
-        if(n>nums.size()/3){
+        if(n>nums.size()/2){
             return nums[res];
         }
 
