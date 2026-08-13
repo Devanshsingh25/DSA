@@ -28,9 +28,13 @@ public:
     //     return el;
     //  }
     //  return -1;
+
+
+
+    //boyer moore counting algorithm;
          
         int res = 0;
-        int count = 1;
+        int count = 0;
         for(int i =0;i<nums.size();i++){
             if(nums[res]==nums[i]){
                 count++;
