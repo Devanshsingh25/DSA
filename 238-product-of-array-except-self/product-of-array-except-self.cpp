@@ -20,6 +20,7 @@ public:
 
           for(int i =0;i<n;i++){
             result[i] = prefix[i]*suffix[i];
+            
           }
 
           return result;
