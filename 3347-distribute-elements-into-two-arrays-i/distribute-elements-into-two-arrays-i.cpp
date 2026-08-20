@@ -21,15 +21,20 @@ public:
              idx++;
         }
        
-       for(int i =0;i<arr1.size();i++){
-            res.push_back(arr1[i]);
+    //    for(int i =0;i<arr1.size();i++){
+    //         res.push_back(arr1[i]);
+    //    }
+
+    //    for(int i  =0;i<arr2.size();i++){
+    //     res.push_back(arr2[i]);
+    //    }
+
+
+       for(int i =0;i<arr2.size();i++){
+        arr1.push_back(arr2[i]);
        }
 
-       for(int i  =0;i<arr2.size();i++){
-        res.push_back(arr2[i]);
-       }
-
-       return res;
+       return arr1;
 
     }
 };
