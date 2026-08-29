@@ -6,11 +6,6 @@ public:
     return c=='A' || c=='E' || c=='I' || c=='O' ||
            c=='U' || c=='a' || c=='e' || c=='i' ||
            c=='o' || c=='u';
-
-
-
-
-
     }
 
     string reverseVowels(string s) {
