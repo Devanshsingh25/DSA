@@ -33,14 +33,14 @@ public:
            vector<char>v;
            string res="";
            for(int i =0;i<s.size();i++){
-                if(v.size()==0)v.push_back(s[i]);
-                else if(v[v.size()-1]==s[i])v.pop_back();
+                if(res.size()==0)res.push_back(s[i]);
+                else if(res[res.size()-1]==s[i])res.pop_back();
                 else
-                v.push_back(s[i]);
+                res.push_back(s[i]);
            }
-           for(int i =0;i<v.size();i++){
-            res = res+v[i];
-           }
+        //    for(int i =0;i<res.size();i++){
+        //     res = res+v[i];
+        //    }
           return res;
     }
 };
