@@ -18,10 +18,10 @@ public:
         int  i = 0;
         int totalcount = 0;
         for(int i =0;i<s.size();i++){
-          int j =i;
-          int countodd = expand(s,i,j);
-           j = i+1;
-          int counteven = expand(s,i,j);
+        //   int j =i;
+          int countodd = expand(s,i,i);
+        //    j = i+1;
+          int counteven = expand(s,i,i+1);
           totalcount = totalcount+counteven+countodd;
 
 
