@@ -19,23 +19,35 @@ public:
 
         // return maxLen;
 
-        int n = s.size();
-        int res = 0;
-        for(int i =0;i<n;i++){
-            vector<bool>visited(256);
-            for(int j =i;j<n;j++){
-                if(visited[s[j]]==true){
-                    break;
-                }
-                else{
-                    res = max(res,j-i+1);
-                    visited[s[j]] = true;
-                }
-            }
-        }
+        // int n = s.size();
+        // int res = 0;
+        // for(int i =0;i<n;i++){
+        //     vector<bool>visited(256);
+        //     for(int j =i;j<n;j++){
+        //         if(visited[s[j]]==true){
+        //             break;
+        //         }
+        //         else{
+        //             res = max(res,j-i+1);
+        //             visited[s[j]] = true;
+        //         }
+        //     }
+        // }
 
-        return res;
+        // return res;
          
 
+         int n = s.size();
+         int maxend = 0;
+         int maxi= 0;
+         int  i = 0;
+         vector<int>prev(256,-1);
+         for(int j = 0;j<n;j++){
+            i = max(i,prev[s[j]]+1);//-> starting index
+            maxend = j-i+1;
+            maxi =  max(maxi,maxend);
+            prev[s[j]] = j;
+         }
+       return maxi;
     }
 };
