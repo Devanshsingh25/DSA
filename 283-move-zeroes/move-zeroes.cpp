@@ -24,21 +24,34 @@ public:
     //         }
     //     }
         
-         int n  =nums.size();
-         for(int i =0;i<n;i++){
-            int j = i+1;
-            if(nums[i]==0){
-            while(j<n){
-                if(nums[j]!=0){
-                    swap(nums[i],nums[j]);
-                    break;
-                }
-                else{
-                     j++;
-                }
+        //too complicated and naive solution need to optimize it
+
+        //  int n  =nums.size();
+        //  for(int i =0;i<n;i++){
+        //     int j = i+1;
+        //     if(nums[i]==0){
+        //     while(j<n){
+        //         if(nums[j]!=0){
+        //             swap(nums[i],nums[j]);
+        //             break;
+        //         }
+        //         else{
+        //              j++;
+        //         }
+        //     }
+        //  }
+        //  }
+
+       int count = 0;
+        for(int i =0;i<nums.size();i++){
+            if(nums[count]==0 && nums[i]!=0){
+                swap(nums[count],nums[i]);
+                count++;
             }
-         }
-         }
+            else if(nums[count]!=0){
+                count++;
+            }
+        }
 
     }
 };
