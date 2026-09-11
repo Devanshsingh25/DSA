@@ -1,7 +1,6 @@
 class Solution {
 public:
-
-               int expand(string s,int i,int j){
+         int expand(string s,int i,int j){
                int n = s.size();
               
                while(i>=0 && j<n && s[i]==s[j]){
@@ -17,6 +16,9 @@ public:
            }
 
 
+
+ 
+       
 
     string longestPalindrome(string s) {
         // int start = 0, maxLen = 1;
@@ -65,7 +67,6 @@ public:
          }
 
          return s.substr(start,maxlen);
-
-
+        
     }
 };
