@@ -1,69 +1,20 @@
 class Solution {
 public:
     int characterReplacement(string s, int k) {
-        int j = 0;
-        // int len =0;
-        int maxlen = 0;
-        int n = s.size();
+        vector<int>freq(256);
+        int left = 0;
         int maxfreq = 0;
-        int size = 0;
-        vector<int>freq(26);
-        for(int i =0;i<n;i++){
-        
+        int ans = 0;
+        for(int right = 0;right<s.size();right++){
+            freq[s[right]-'A']++;
+            maxfreq = max(maxfreq,freq[s[right]-'A']);
+            while((right-left+1)-maxfreq>k){
+                freq[s[left]-'A']--;
+                left++;
+            }
 
-            //calculating frequency
-           freq[s[i]-'A']++;
-
-           //calculating max-frequency
-      maxfreq = max(maxfreq,freq[s[i]-'A']);
-
-        //calculating replacement
-        //  size = i-j+1;
-        while(i-j+1-maxfreq>k){
-           
-            freq[s[j]-'A']--;
-            j++;
-
-        
+            ans = max(ans,right-left+1);
         }
-        maxlen = max(maxlen,i-j+1);
-
-        }    
-
-        return maxlen;
-
+        return ans;
     }
 };
-
-
-// class Solution {
-// public:
-//     int characterReplacement(string s, int k) {
-//         int j = 0;
-//         int maxlen = 0;
-//         int n = s.size();
-//         int maxfreq = 0;
-
-//         vector<int> freq(26, 0);
-
-//         for (int i = 0; i < n; i++) {
-
-//             // Calculate frequency
-//             freq[s[i] - 'A']++;
-
-//             // Calculate maximum frequency
-//             maxfreq = max(maxfreq, freq[s[i] - 'A']);
-
-//             // Shrink window if replacements are more than k
-//             while ((i - j + 1) - maxfreq > k) {
-//                 freq[s[j] - 'A']--;
-//                 j++;
-//             }
-
-//             // Calculate maximum length
-//             maxlen = max(maxlen, i - j + 1);
-//         }
-
-//         return maxlen;
-//     }
-// };
