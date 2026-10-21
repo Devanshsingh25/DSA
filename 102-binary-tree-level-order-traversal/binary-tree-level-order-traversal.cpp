@@ -27,6 +27,7 @@ public:
             ans= {};
             int count = q.size();
             while(count--){
+         
             TreeNode*curr = q.front();
             q.pop();
             if(curr->left!=NULL){
@@ -37,10 +38,13 @@ public:
                 q.push(curr->right);
                 ans.push_back(curr->right->val);
             }
+            
             }
+    
             if(ans.size()!=0)
             res.push_back(ans);
-        }
+    }
+        
         
         return res;
     }
