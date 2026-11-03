@@ -1,8 +1,8 @@
 class Solution {
 public:
     int reverse(int x) {
-         long long k  =x;
-         long long m = 0;
+          int  k  =x;
+         int  m = 0;
          while(k){
          
         
